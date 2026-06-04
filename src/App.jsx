@@ -33,9 +33,14 @@ const App = () => {
           <a href="#whats-new" className="hover:text-blue-400 transition-colors">v1.4 Highlights</a>
           <a href="#tech-specs" className="hover:text-blue-400 transition-colors">System Guide</a>
         </div>
-        <button className="px-4 py-2 bg-slate-900 border border-slate-800 hover:border-slate-600 text-slate-100 rounded-md text-sm font-medium transition-all hover:text-blue-400">
+        <a
+          href="https://github.com/shakacb-lgtm/TuxShow"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="px-4 py-2 bg-slate-900 border border-slate-800 hover:border-slate-600 text-slate-100 rounded-md text-sm font-medium transition-all hover:text-blue-400"
+        >
           GitHub Repo
-        </button>
+        </a>
       </nav>
 
       {/* Hero Section */}
@@ -55,14 +60,24 @@ const App = () => {
         </p>
         
         <div className="flex flex-col sm:flex-row gap-4 mb-16">
-          <button className="px-8 py-4 bg-blue-600 hover:bg-blue-500 text-white rounded-lg font-semibold text-lg transition-all shadow-[0_0_20px_rgba(37,99,235,0.3)] flex items-center gap-2">
+          <a 
+            href="https://github.com/shakacb-lgtm/TuxShow/releases/tag/v1.4.0"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="px-8 py-4 bg-blue-600 hover:bg-blue-500 text-white rounded-lg font-semibold text-lg transition-all shadow-[0_0_20px_rgba(37,99,235,0.3)] flex items-center gap-2"
+          >
             <Play className="w-5 h-5 fill-current" />
             Download v1.4.0
-          </button>
-          <button className="px-8 py-4 bg-slate-900 border border-slate-700 hover:border-slate-500 text-slate-100 rounded-lg font-semibold text-lg transition-all flex items-center gap-2">
+          </a>
+          <a
+            href="https://github.com/shakacb-lgtm/TuxShow/releases/download/v1.4.0/TuxShow.v1.4.0.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="px-8 py-4 bg-slate-900 border border-slate-700 hover:border-slate-500 text-slate-100 rounded-lg font-semibold text-lg transition-all flex items-center gap-2"
+          >
             <BookOpen className="w-5 h-5" />
             Read Documentation
-          </button>
+          </a>
         </div>
       </header>
 
