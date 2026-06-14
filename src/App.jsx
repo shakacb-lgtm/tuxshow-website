@@ -99,7 +99,7 @@ const App = ({ query, variables, data }) => {
             Download v1.5.0
           </a>
           <a
-            href="https://github.com/shakacb-lgtm/TuxShow/releases/download/v1.5.0/TuxShow%20v1.5.0.pdf"
+            href="https://github.com/shakacb-lgtm/TuxShow/releases/download/v1.5.0/TuxShow.v1.5.0.pdf"
             target="_blank"
             rel="noopener noreferrer"
             className="px-8 py-4 bg-slate-900 border border-slate-700 hover:border-slate-500 text-slate-100 rounded-lg font-semibold text-lg transition-all flex items-center gap-2"
