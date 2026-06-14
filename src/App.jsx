@@ -26,6 +26,7 @@ import {
 import dashboardImg from './assets/tuxshow_dashboard.png';
 import diagnosticsImg from './assets/tuxshow_diagnostics.png';
 import demoGif from './assets/tuxshow_demo.webp';
+import logoImg from './assets/logo.png';
 
 const App = ({ query, variables, data }) => {
   const { data: tinaData } = useTina({
@@ -60,6 +61,11 @@ const App = ({ query, variables, data }) => {
 
       {/* Hero Section */}
       <header className="relative pt-24 pb-20 px-6 lg:px-8 max-w-6xl mx-auto flex flex-col items-center text-center">
+        <img 
+          src={logoImg} 
+          alt="TuxShow Logo" 
+          className="w-20 h-20 mb-8 drop-shadow-[0_0_20px_rgba(59,130,246,0.4)] transition-transform duration-300 hover:scale-105 select-none" 
+        />
         <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-slate-900 border border-blue-900/50 text-blue-400 text-xs font-mono mb-8 shadow-[0_0_15px_rgba(59,130,246,0.15)]">
           <Zap className="w-3.5 h-3.5" />
           <span>v1.5.0 Stable Release</span>
