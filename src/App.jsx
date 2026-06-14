@@ -205,7 +205,7 @@ const App = ({ query, variables, data }) => {
 
       {/* Footer */}
       <footer className="py-12 px-6 text-center text-slate-600">
-        <p>© 2026 TuxShow. Licensed under MIT. Built for the booth, protected for the show.</p>
+        <p>© 2026 TuxShow. Licensed under GPL. Built for the booth, protected for the show.</p>
       </footer>
     </div>
   );
