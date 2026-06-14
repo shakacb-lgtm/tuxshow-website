@@ -4,15 +4,16 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",
-    "build": "vite build",
+    "dev": "tinacms dev -c \"vite\"",
+    "build": "tinacms build --local --skip-cloud-checks && vite build",
     "lint": "eslint .",
     "preview": "vite preview"
   },
   "dependencies": {
     "lucide-react": "^1.17.0",
     "react": "^19.2.6",
-    "react-dom": "^19.2.6"
+    "react-dom": "^19.2.6",
+    "tinacms": "^1.6.0"
   },
   "devDependencies": {
     "@eslint/js": "^10.0.1",
@@ -27,6 +28,7 @@
     "globals": "^17.6.0",
     "postcss": "^8.5.15",
     "tailwindcss": "^4.3.0",
-    "vite": "^8.0.12"
+    "vite": "^8.0.12",
+    "@tinacms/cli": "^1.6.0"
   }
 }

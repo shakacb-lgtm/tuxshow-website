@@ -4,3 +4,5 @@ node_modules/
 # production builds and environment variables
 dist/
 .env
+node_modules
+tina/__generated__
