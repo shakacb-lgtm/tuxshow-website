@@ -48,6 +48,7 @@ const App = ({ query, variables, data }) => {
           <a href="#whats-new" className="hover:text-blue-400 transition-colors">v1.5 Highlights</a>
           <a href="#showcase" className="hover:text-blue-400 transition-colors">Visual Showcase</a>
           <a href="#tech-specs" className="hover:text-blue-400 transition-colors">System Guide</a>
+          <a href="/plugin-creator/index.html" className="hover:text-orange-400 transition-colors font-semibold flex items-center gap-1"><Cpu className="w-3.5 h-3.5"/> Plugin Creator</a>
         </div>
         <a
           href="https://github.com/shakacb-lgtm/TuxShow"
@@ -106,6 +107,13 @@ const App = ({ query, variables, data }) => {
           >
             <BookOpen className="w-5 h-5" />
             Read Documentation
+          </a>
+          <a
+            href="/plugin-creator/index.html"
+            className="px-8 py-4 bg-slate-900 border border-slate-700 hover:border-orange-500/50 hover:text-orange-400 text-slate-100 rounded-lg font-semibold text-lg transition-all flex items-center gap-2"
+          >
+            <Cpu className="w-5 h-5" />
+            Plugin Creator
           </a>
         </div>
       </header>
