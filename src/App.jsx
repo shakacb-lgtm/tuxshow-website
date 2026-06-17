@@ -68,7 +68,7 @@ const App = ({ query, variables, data }) => {
         />
         <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-slate-900 border border-blue-900/50 text-blue-400 text-xs font-mono mb-8 shadow-[0_0_15px_rgba(59,130,246,0.15)]">
           <Zap className="w-3.5 h-3.5" />
-          <span>v1.5.0 Stable Release</span>
+          <span>v1.5.1 Stable Release</span>
         </div>
         
         <h1 className="text-5xl md:text-7xl font-extrabold tracking-tight mb-6 max-w-5xl leading-tight text-slate-50">
@@ -84,22 +84,22 @@ const App = ({ query, variables, data }) => {
           {tinaData?.pages?.body ? (
             <TinaMarkdown content={tinaData.pages.body} />
           ) : (
-            <>A robust, open-source timeline logic and media server for live performance. Version 1.5.0 delivers native Linux stability, advanced hardware mapping, mixed-audio recording, and redundant multi-machine synchronization as detailed in <span className="font-mono italic text-blue-400">TuxShow v1.5.0.pdf</span>.</>
+            <>A robust, open-source timeline logic and media server for live performance. Version 1.5.1 delivers native Linux stability, advanced hardware mapping, mixed-audio recording, and redundant multi-machine synchronization as detailed in <span className="font-mono italic text-blue-400">TuxShow v1.5.1.pdf</span>.</>
           )}
         </div>
         
         <div className="flex flex-col sm:flex-row gap-4 mb-16">
           <a 
-            href="https://github.com/shakacb-lgtm/TuxShow/releases/tag/v1.5.0"
+            href="https://github.com/shakacb-lgtm/TuxShow/releases/tag/v1.5.1"
             target="_blank"
             rel="noopener noreferrer"
             className="px-8 py-4 bg-blue-600 hover:bg-blue-500 text-white rounded-lg font-semibold text-lg transition-all shadow-[0_0_20px_rgba(37,99,235,0.3)] flex items-center gap-2"
           >
             <Play className="w-5 h-5 fill-current" />
-            Download v1.5.0
+            Download v1.5.1
           </a>
           <a
-            href="https://github.com/shakacb-lgtm/TuxShow/releases/download/v1.5.0/TuxShow.v1.5.0.pdf"
+            href="https://github.com/shakacb-lgtm/TuxShow/releases/download/v1.5.1/TuxShow%20v1.5.1.pdf"
             target="_blank"
             rel="noopener noreferrer"
             className="px-8 py-4 bg-slate-900 border border-slate-700 hover:border-slate-500 text-slate-100 rounded-lg font-semibold text-lg transition-all flex items-center gap-2"
@@ -110,9 +110,9 @@ const App = ({ query, variables, data }) => {
         </div>
       </header>
 
-      {/* v1.5.0 Core Additions */}
+      {/* v1.5.1 Core Additions */}
       <section id="whats-new" className="py-20 px-6 max-w-6xl mx-auto border-t border-slate-900">
-        <h2 className="text-3xl font-bold text-slate-100 mb-12 text-center">v1.5.0 Core Additions</h2>
+        <h2 className="text-3xl font-bold text-slate-100 mb-12 text-center">v1.5.1 Core Additions</h2>
         
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           <div className="bg-slate-900 border border-slate-800 p-6 rounded-2xl hover:border-blue-500/50 transition-colors">
@@ -139,7 +139,7 @@ const App = ({ query, variables, data }) => {
       <section id="showcase" className="py-20 px-6 max-w-6xl mx-auto border-t border-slate-900">
         <h2 className="text-3xl font-bold text-slate-100 mb-4 text-center">Visual Application Showcase</h2>
         <p className="text-slate-400 text-center mb-12 max-w-2xl mx-auto">
-          Explore the TuxShow v1.5.0 interface. Highly interactive, multi-projection previewing, and complete diagnostic tools built for theater booths.
+          Explore the TuxShow v1.5.1 interface. Highly interactive, multi-projection previewing, and complete diagnostic tools built for theater booths.
         </p>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-stretch">
@@ -192,7 +192,7 @@ const App = ({ query, variables, data }) => {
         <div className="max-w-4xl mx-auto">
           <h2 className="text-3xl font-bold text-slate-100 mb-8">IT Administrator & Environment</h2>
           <p className="text-slate-400 mb-10 max-w-2xl">
-            As detailed in <span className="text-blue-400 font-mono italic">TuxShow v1.5.0.pdf</span>, the system architecture has been refactored for maximum stability in mixed-hardware environments.
+            As detailed in <span className="text-blue-400 font-mono italic">TuxShow v1.5.1.pdf</span>, the system architecture has been refactored for maximum stability in mixed-hardware environments.
           </p>
           
           <div className="grid md:grid-cols-2 gap-8 font-mono text-sm">
