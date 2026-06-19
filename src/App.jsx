@@ -20,7 +20,11 @@ import {
   Radio,
   Settings2,
   Volume2,
-  Tv
+  Tv,
+  Mail,
+  MessageSquare,
+  ExternalLink,
+  Scale
 } from 'lucide-react';
 
 import dashboardImg from './assets/tuxshow_dashboard.png';
@@ -28,12 +32,39 @@ import diagnosticsImg from './assets/tuxshow_diagnostics.png';
 import demoGif from './assets/tuxshow_demo.webp';
 import logoImg from './assets/logo.png';
 
+const GitHubIcon = (props) => (
+  <svg
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth="2"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+    {...props}
+  >
+    <path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4" />
+    <path d="M9 18c-4.51 2-5-2-7-2" />
+  </svg>
+);
+
 const App = ({ query, variables, data }) => {
   const { data: tinaData } = useTina({
     query,
     variables,
     data,
   });
+
+  React.useEffect(() => {
+    // Systematic link validation alerts
+    console.warn(
+      "%c[TuxShow Footer Warning] The following internal routes do not exist in the landing page router config: '/docs', '/changelog', and '/protocol'. Routed to '#TODO-URL-VERIFICATION'.",
+      "color: #f43f5e; font-weight: bold; font-size: 11px; background: rgba(244, 63, 94, 0.08); padding: 4px 8px; border-radius: 4px; border: 1px solid rgba(244, 63, 94, 0.2);"
+    );
+    console.warn(
+      "%c[TuxShow Footer Warning] The external Discord community link is not yet established in this workspace. Routed to '#TODO-URL-VERIFICATION'.",
+      "color: #f43f5e; font-weight: bold; font-size: 11px; background: rgba(244, 63, 94, 0.08); padding: 4px 8px; border-radius: 4px; border: 1px solid rgba(244, 63, 94, 0.2);"
+    );
+  }, []);
 
   return (
     <div className="min-h-screen bg-slate-950 text-slate-300 font-sans selection:bg-blue-500/30">
@@ -217,9 +248,124 @@ const App = ({ query, variables, data }) => {
         </div>
       </section>
 
-      {/* Footer */}
-      <footer className="py-12 px-6 text-center text-slate-600">
-        <p>© 2026 TuxShow. Licensed under GPL. Built for the booth, protected for the show.</p>
+      {/* Global Footer */}
+      <footer className="w-full bg-slate-950/40 border-t border-slate-900/80 backdrop-blur-lg mt-24 py-16 px-6 lg:px-12 transition-all duration-300">
+        <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-12 text-slate-400 text-sm">
+          
+          {/* Column 1: Brand & Legal */}
+          <div className="flex flex-col items-start gap-4">
+            <div className="flex items-center gap-2">
+              <MonitorPlay className="text-blue-500 w-6 h-6" />
+              <span className="text-xl font-bold tracking-tight text-slate-100">Tux<span className="text-orange-500">Show</span></span>
+            </div>
+            <p className="text-xs text-slate-400 leading-relaxed max-w-xs">
+              Production-Grade Projection Mapping & Show Control
+            </p>
+            <div className="mt-2 flex flex-col gap-1.5 text-xs text-slate-500">
+              <p>© 2026 Christopher Baker. All rights reserved.</p>
+              <a 
+                href="https://www.gnu.org/licenses/gpl-3.0.html" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="inline-flex items-center gap-1.5 hover:text-emerald-400 font-mono transition-colors"
+              >
+                <Scale className="w-3.5 h-3.5" /> GPLv3 License
+              </a>
+            </div>
+          </div>
+
+          {/* Column 2: Resources & Support */}
+          <div className="flex flex-col gap-4">
+            <h4 className="text-xs font-bold uppercase tracking-wider text-slate-200">Resources & Support</h4>
+            <ul className="flex flex-col gap-2.5 text-sm">
+              <li>
+                <a 
+                  href="https://github.com/shakacb-lgtm/TuxShow/releases/download/v1.5.1/TuxShow.v1.5.1.pdf" 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  className="hover:text-emerald-400 transition-colors flex items-center gap-1"
+                >
+                  Documentation <ExternalLink className="w-3.5 h-3.5 text-slate-600" />
+                </a>
+              </li>
+              <li>
+                <a 
+                  href="/plugin-creator/index.html" 
+                  className="hover:text-emerald-400 transition-colors flex items-center gap-1"
+                >
+                  Plugin Creator Toolkit
+                </a>
+              </li>
+              <li>
+                <a 
+                  href="#TODO-URL-VERIFICATION" 
+                  className="hover:text-emerald-400 transition-colors opacity-75 hover:opacity-100"
+                >
+                  Protocol References
+                </a>
+              </li>
+              <li>
+                <a 
+                  href="#TODO-URL-VERIFICATION" 
+                  className="hover:text-emerald-400 transition-colors opacity-75 hover:opacity-100"
+                >
+                  Changelog
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          {/* Column 3: Community & Development */}
+          <div className="flex flex-col gap-4">
+            <h4 className="text-xs font-bold uppercase tracking-wider text-slate-200">Community & Development</h4>
+            <ul className="flex flex-col gap-2.5 text-sm">
+              <li>
+                <a 
+                  href="https://github.com/shakacb-lgtm/TuxShow" 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  className="hover:text-emerald-400 transition-colors flex items-center gap-1.5"
+                >
+                  <GitHubIcon className="w-4 h-4" /> Source Code Repository
+                </a>
+              </li>
+              <li>
+                <a 
+                  href="https://github.com/shakacb-lgtm/TuxShow/issues" 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  className="hover:text-emerald-400 transition-colors flex items-center gap-1.5"
+                >
+                  <Terminal className="w-4 h-4 text-slate-500" /> Issue Tracker
+                </a>
+              </li>
+              <li>
+                <a 
+                  href="#TODO-URL-VERIFICATION" 
+                  className="hover:text-emerald-400 transition-colors flex items-center gap-1.5 opacity-75 hover:opacity-100"
+                >
+                  <MessageSquare className="w-4 h-4" /> Community Hub
+                </a>
+              </li>
+              <li>
+                <a 
+                  href="mailto:tuxshowscpm@gmail.com" 
+                  className="hover:text-emerald-400 transition-colors flex items-center gap-1.5"
+                >
+                  <Mail className="w-4 h-4" /> Contact Development
+                </a>
+              </li>
+            </ul>
+          </div>
+
+        </div>
+
+        {/* Bottom Sub-Footer Bar */}
+        <div className="max-w-6xl mx-auto border-t border-slate-900/60 mt-12 pt-8 flex justify-center">
+          <span className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-slate-950/60 border border-slate-900 text-xs font-medium text-slate-500 tracking-wide select-none">
+            <Server className="w-3.5 h-3.5 text-blue-500/80" /> Built for Linux / Optimized for Ubuntu
+          </span>
+        </div>
       </footer>
     </div>
   );
